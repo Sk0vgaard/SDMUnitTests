@@ -9,18 +9,32 @@ namespace SDMUnitTests.SortedBag
 {
     public class SortedBag : ISortedBag
     {
-        public List<int> bag { get; set; }
+        public List<int> bag;
+
+        public SortedBag()
+        {
+            bag = new List<int>();
+        }
+
         public void Add(int i)
         {
-            throw new NotImplementedException();
+            bag.Add(i);
         }
 
         public int Pop()
         {
-            throw new NotImplementedException();
+            bag.Sort();
+            var result = bag[0];
+            bag.RemoveAt(0);
+            return result;
         }
 
         public int Size()
+        {
+            return bag.Count;
+        }
+
+        public List<int> GetAll()
         {
             throw new NotImplementedException();
         }

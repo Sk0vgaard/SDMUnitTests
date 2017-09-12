@@ -8,7 +8,6 @@ namespace SDMUnitTests.Interfaces
 {
     interface ISortedBag
     {
-        List<int> bag { get; set; }
 
         void Add(int i);
 
