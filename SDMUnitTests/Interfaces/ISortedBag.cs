@@ -14,7 +14,7 @@ namespace SDMUnitTests.Interfaces
 
         int Pop();
 
-        int Count();
+        int Size();
     }
     
 }
